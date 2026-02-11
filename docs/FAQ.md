@@ -40,8 +40,6 @@ cp -r .cursor/* /path/to/your-project/.cursor/
 
 Платные MCP-серверы можно приобрести на [vibecoding1c.ru/mcp_server](https://vibecoding1c.ru/mcp_server)
 
-**Стоимость:** 7000₽ за комплект из 8 MCP-серверов
-
 **Что вы получаете:**
 - Docker-контейнеры для развертывания на вашем сервере
 - Инструкции по настройке и запуску

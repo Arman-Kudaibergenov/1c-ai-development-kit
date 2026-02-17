@@ -118,12 +118,12 @@ user-1c-code-checker-check_1c_code(code, check_type):
   - Performance recommendations
   - Best practices
 
-user-PROJECT-codemetadata (project-specific MCP)-codesearch(query):
+user-PROJECT-codemetadata-codesearch(query):
   - Find similar code
   - Check for duplicates
   - Learn from existing solutions
 
-user-PROJECT-graph (project-specific MCP)-search_metadata(query):
+user-PROJECT-graph-search_metadata(query):
   - Analyze metadata dependencies
   - Check for circular references
   - Validate object relationships
@@ -198,11 +198,11 @@ user-rlm-toolkit-rlm_record_causal_decision(decision, reasons, consequences):
 ### Phase 3: Context Analysis
 ```yaml
 1. Get similar code:
-   similar = user-PROJECT-codemetadata (project-specific MCP)-codesearch(function_name)
+   similar = user-PROJECT-codemetadata-codesearch(function_name)
    compare_implementations()
 
 2. Check metadata:
-   metadata = user-PROJECT-graph (project-specific MCP)-search_metadata(object_name)
+   metadata = user-PROJECT-graph-search_metadata(object_name)
    validate_dependencies()
 
 3. Load past reviews:

@@ -69,8 +69,8 @@ if code_quality_degradation:
 - `user-rlm-toolkit-*`: Memory and context management
 - `user-1c-syntax-checker-syntaxcheck`: BSL syntax validation
 - `user-1c-code-checker-check_1c_code`: Logic analysis via 1C:Напарник
-- `user-PROJECT-codemetadata (project-specific MCP)-codesearch`: Code search in KAF project
-- `user-PROJECT-graph (project-specific MCP)-search_metadata`: Neo4j metadata graph queries
+- `user-PROJECT-codemetadata-codesearch`: Code search in KAF project
+- `user-PROJECT-graph-search_metadata`: Neo4j metadata graph queries
 - `bsl-lsp-bridge-*`: Singleton LSP server (diagnostics, formatting, hover)
 
 ### Shell Commands
@@ -129,7 +129,7 @@ Action:
   1. Estimate savings: 5 * 2min = 10min/day
   2. Propose: Create skill "find-1c-function" using MCP codesearch
   3. Implementation:
-     - Use user-PROJECT-codemetadata (project-specific MCP)-codesearch
+     - Use user-PROJECT-codemetadata-codesearch
      - Add to auto-skill-bootstrap capabilities
   4. Record decision in RLM
 ```
@@ -262,7 +262,7 @@ Detected:
 
 Proposed:
   - Skill: "find-1c-function"
-  - Implementation: user-PROJECT-codemetadata (project-specific MCP)-codesearch
+  - Implementation: user-PROJECT-codemetadata-codesearch
   - Expected savings: 10 min/day, 0 extra tokens
 
 Action:
@@ -304,7 +304,7 @@ Proposed:
   - Expected savings: 49.5k tokens (99%)
 
 Action:
-  1. Load metadata: user-PROJECT-graph (project-specific MCP)-search_metadata
+  1. Load metadata: user-PROJECT-graph-search_metadata
   2. Store in RLM: rlm_add_hierarchical_fact
   3. Update agents: Use rlm_route_context
   4. Measure: Track token reduction

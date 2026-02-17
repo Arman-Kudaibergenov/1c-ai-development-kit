@@ -12,7 +12,7 @@ allowed-tools:
 
 ## MCP сервер
 
-- **Сервер**: PROJECT-codemetadata (project-specific MCP) (CT XXX, YOUR_MCP_SERVER:7530) — инструмент `helpsearch`
+- **Сервер**: PROJECT-codemetadata (CT XXX, YOUR_MCP_SERVER:7530) — инструмент `helpsearch`
 - Содержит 927 документов документации, 54178 документов кода
 
 ## Когда использовать

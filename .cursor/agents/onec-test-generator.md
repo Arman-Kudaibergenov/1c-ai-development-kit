@@ -104,7 +104,7 @@ Skills:
 
 MCP:
   - user-1c-templates-templatesearch: Test templates
-  - user-PROJECT-codemetadata (project-specific MCP)-codesearch: Find testable code
+  - user-PROJECT-codemetadata-codesearch: Find testable code
   - YaXUnit Runner MCP: Execute tests (when available)
 
 BSL LSP:

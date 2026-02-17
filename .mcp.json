@@ -4,9 +4,9 @@
       "type": "sse",
       "url": "http://YOUR_SERVER:8200/sse"
     },
-    "PROJECT-codemetadata (project-specific MCP)": {
+    "PROJECT-codemetadata": {
       "type": "http",
-      "url": "http://YOUR_SERVER:7530/mcp"
+      "url": "http://YOUR_MCP_SERVER:7530/mcp"
     }
   }
 }

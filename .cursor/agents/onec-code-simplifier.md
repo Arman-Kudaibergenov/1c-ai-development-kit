@@ -353,7 +353,7 @@ Check names:
   user-1c-help-docsearch("variable name")
 
 Find existing code:
-  user-PROJECT-codemetadata (project-specific MCP)-codesearch("similar logic")
+  user-PROJECT-codemetadata-codesearch("similar logic")
 
 БСП search:
   user-1c-ssl-ssl_search("functionality")

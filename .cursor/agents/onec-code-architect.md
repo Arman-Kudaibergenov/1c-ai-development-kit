@@ -163,19 +163,19 @@ Access Rights:
 
 ```yaml
 Metadata:
-  user-PROJECT-codemetadata-metadatasearch (project-specific MCP)("Справочники.Клиенты")
-  user-PROJECT-graph (project-specific MCP)-search_metadata("Справочник Клиенты")
+  user-PROJECT-codemetadata-metadatasearch("Справочники.Клиенты")
+  user-PROJECT-graph-search_metadata("Справочник Клиенты")
 
 Code:
-  user-PROJECT-codemetadata (project-specific MCP)-codesearch("паттерн или функция")
+  user-PROJECT-codemetadata-codesearch("паттерн или функция")
   user-mcparqa24-graph-search_code("расчет скидки")
 
 Help:
-  user-PROJECT-codemetadata (project-specific MCP)-helpsearch("функциональность")
+  user-PROJECT-codemetadata-helpsearch("функциональность")
   user-1c-ssl-ssl_search("БСП функция")
 
 Graph:
-  user-PROJECT-graph (project-specific MCP)-answer_metadata_question("Какие объекты связаны?")
+  user-PROJECT-graph-answer_metadata_question("Какие объекты связаны?")
 ```
 
 ### File Operations

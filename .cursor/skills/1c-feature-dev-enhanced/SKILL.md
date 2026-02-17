@@ -403,8 +403,8 @@ Phase 7: bsl_lsp_diagnostics(file_path) для проверки качества
 
 ```yaml
 Phase 2: 
-  - user-PROJECT-codemetadata-metadatasearch (project-specific MCP)(query)
-  - user-PROJECT-codemetadata (project-specific MCP)-codesearch(query)
+  - user-PROJECT-codemetadata-metadatasearch(query)
+  - user-PROJECT-codemetadata-codesearch(query)
 
 Phase 6:
   - user-1c-syntax-checker-syntaxcheck(code)

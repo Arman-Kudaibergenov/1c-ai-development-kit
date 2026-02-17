@@ -94,7 +94,7 @@ openspec/          — Specification-Driven Development
 - `rlm-toolkit` (CT XXX, YOUR_RLM_SERVER:8200) — персистентная память между сессиями
 
 **Проектные (разворачиваются под каждый проект на CT XXX, YOUR_MCP_SERVER):**
-- `PROJECT-codemetadata (project-specific MCP)` — поиск по коду, метаданным и документации 1С (helpsearch, codesearch, metadatasearch). Каждый проект — свой контейнер на своём порту. Текущий: порт 7530
+- `PROJECT-codemetadata` — поиск по коду, метаданным и документации 1С (helpsearch, codesearch, metadatasearch). Каждый проект — свой контейнер на своём порту. Текущий: порт 7530
 
 ## OpenSpec
 

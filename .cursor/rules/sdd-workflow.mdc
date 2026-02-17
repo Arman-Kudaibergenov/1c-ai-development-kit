@@ -498,8 +498,8 @@ openspec/changes/[feature-name]/
   - Phase 6: Проверка синтаксиса и логики
 
 Команды:
-  user-PROJECT-codemetadata-metadatasearch (project-specific MCP)(query)
-  user-PROJECT-codemetadata (project-specific MCP)-codesearch(query)
+  user-PROJECT-codemetadata-metadatasearch(query)
+  user-PROJECT-codemetadata-codesearch(query)
   user-1c-syntax-checker-syntaxcheck(code)
   user-1c-code-checker-check_1c_code(code, check_type)
 ```

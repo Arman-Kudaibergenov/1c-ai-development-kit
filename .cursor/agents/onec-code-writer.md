@@ -89,7 +89,7 @@ Use MCP when:
 Tools:
   - user-1c-help-docsearch("method name")
   - user-1c-ssl-ssl_search("БСП functionality")
-  - user-PROJECT-codemetadata (project-specific MCP)-codesearch("existing implementation")
+  - user-PROJECT-codemetadata-codesearch("existing implementation")
 ```
 
 ---
@@ -148,10 +148,10 @@ Templates:
   user-1c-templates-templatesearch("описание задачи")
 
 Metadata:
-  user-PROJECT-codemetadata-metadatasearch (project-specific MCP)("Справочники.Клиенты")
+  user-PROJECT-codemetadata-metadatasearch("Справочники.Клиенты")
 
 Code search:
-  user-PROJECT-codemetadata (project-specific MCP)-codesearch("функция или паттерн")
+  user-PROJECT-codemetadata-codesearch("функция или паттерн")
 ```
 
 ### File Operations
@@ -220,7 +220,7 @@ Write:
    - user-1c-help-docsearch("variable name")
 
 3. Find existing code:
-   - user-PROJECT-codemetadata (project-specific MCP)-codesearch("similar functionality")
+   - user-PROJECT-codemetadata-codesearch("similar functionality")
    - Reuse instead of rewriting
 ```
 

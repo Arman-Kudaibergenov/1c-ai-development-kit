@@ -90,8 +90,8 @@
   4. MCP серверы (метаданные, код, справка)
 
 Инструменты:
-  - user-PROJECT-codemetadata (project-specific MCP)-codesearch: Поиск по коду
-  - user-PROJECT-graph (project-specific MCP)-search_metadata: Поиск по метаданным
+  - user-PROJECT-codemetadata-codesearch: Поиск по коду
+  - user-PROJECT-graph-search_metadata: Поиск по метаданным
   - user-1c-help-docsearch: Справка по платформе
   - user-1c-ssl-ssl_search: Поиск в БСП
 ```
@@ -254,8 +254,8 @@
   - Индексы (для производительности)
 
 Инструменты:
-  user-PROJECT-codemetadata-metadatasearch (project-specific MCP)("Справочники.Клиенты.Реквизиты")
-  user-PROJECT-graph (project-specific MCP)-search_metadata("Справочник Клиенты")
+  user-PROJECT-codemetadata-metadatasearch("Справочники.Клиенты.Реквизиты")
+  user-PROJECT-graph-search_metadata("Справочник Клиенты")
   user-mcparqa24-codemetadata-metadatasearch("Клиенты")
 ```
 
@@ -721,11 +721,11 @@
   user-1c-code-checker-check_1c_code(code, "logic")
 
 Метаданные:
-  user-PROJECT-codemetadata-metadatasearch (project-specific MCP)("Справочники.Клиенты")
-  user-PROJECT-graph (project-specific MCP)-search_metadata("Справочник Клиенты")
+  user-PROJECT-codemetadata-metadatasearch("Справочники.Клиенты")
+  user-PROJECT-graph-search_metadata("Справочник Клиенты")
 
 Код:
-  user-PROJECT-codemetadata (project-specific MCP)-codesearch("функция или паттерн")
+  user-PROJECT-codemetadata-codesearch("функция или паттерн")
 ```
 
 ---

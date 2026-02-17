@@ -71,7 +71,7 @@ BSL LSP:
 
 MCP:
   - user-1c-code-checker-check_1c_code: Performance analysis
-  - user-PROJECT-codemetadata (project-specific MCP)-codesearch: Find similar queries
+  - user-PROJECT-codemetadata-codesearch: Find similar queries
 
 RLM:
   - rlm_route_context: Get optimization patterns

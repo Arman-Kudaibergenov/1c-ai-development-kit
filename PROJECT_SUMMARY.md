@@ -1,4 +1,4 @@
-# Project Summary: 1C AI Development Kit
+﻿# Project Summary: 1C AI Development Kit
 
 ## Что создано
 
@@ -44,10 +44,10 @@
 
 Все приватные данные заменены:
 
-- IP-адреса: `192.168.0.101` → `YOUR_SERVER`
-- Пути пользователя: `C:\Users\Arman` → `C:\Users\YOUR_USERNAME`
+- IP-адреса: `YOUR_SERVER` → `YOUR_SERVER`
+- Пути пользователя: `C:\Users\YOUR_USERNAME` → `C:\Users\YOUR_USERNAME`
 - Проектные MCP: `kaf-*`, `mcparqa24-*` → `PROJECT-*` (с описанием)
-- Домены: `homeserver` → `YOUR_SERVER`
+- Домены: `YOUR_SERVER` → `YOUR_SERVER`
 
 **Скрипт:** `scripts/sanitize-files.ps1` (автоматизирует очистку)
 
@@ -135,8 +135,8 @@
 ### Приватные MCP-серверы
 
 Не включены проектные MCP:
-- `kaf-codemetadata`
-- `kaf-graph`
+- `PROJECT-codemetadata`
+- `PROJECT-graph`
 - `mcparqa24-*`
 - `rarus-*`
 
@@ -162,7 +162,7 @@
 ### 1. Тестирование в локальном Gitea
 
 ```bash
-cd c:\Users\Arman\workspace\1c-ai-development-kit
+cd C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit
 
 # Добавьте remote для Gitea
 git remote add origin http://YOUR_GITEA_SERVER/yourname/1c-ai-development-kit.git
@@ -202,7 +202,7 @@ git push -u origin main
 
 ```powershell
 # В основном проекте
-cd c:\Users\Arman\workspace\1c-AI-workspace
+cd C:\Users\YOUR_USERNAME\workspace\1c-AI-workspace
 
 # Синхронизация
 .\sync-public.ps1 -Commit -Push

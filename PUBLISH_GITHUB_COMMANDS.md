@@ -1,9 +1,9 @@
-# Команды для публикации на GitHub
+﻿# Команды для публикации на GitHub
 
 ## 1. Перейдите в папку проекта
 
 ```powershell
-cd C:\Users\Arman\workspace\1c-ai-development-kit
+cd C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit
 ```
 
 ## 2. Проверьте текущее состояние

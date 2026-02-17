@@ -27,7 +27,7 @@ globs: configs/onec-*/**,scripts/onec-*
 ## Dev Container
 
 - **Образ:** `onec-local/onec-client:8.3.24.1808-ready`
-- **Расположение:** /opt/onec-dev-container/ на Docker LXC (CT 100)
+- **Расположение:** /opt/onec-dev-container/ на Docker LXC (CT XXX)
 - **Workflow:** Скопировать DT в `\\YOUR_SERVER\onec-inbox`, создать базу через ibcmd
 - **Документация:** `docs/onec-dev-container.md`
 

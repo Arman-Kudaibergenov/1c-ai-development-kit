@@ -1,4 +1,4 @@
-param(
+﻿param(
     [Parameter(Mandatory=$true)][string]$ProjectPath,
     [Parameter(Mandatory=$true)][string]$Server,
     [Parameter(Mandatory=$true)][string]$Database,
@@ -11,7 +11,7 @@ param(
     [switch]$Force,
     [string]$GitUserName = "Developer",
     [string]$GitUserEmail = "dev@local",
-    [string]$SkillsSource = "C:\Users\Arman\workspace\Home_Infrastructure\.cursor\skills"
+    [string]$SkillsSource = "C:\Users\YOUR_USERNAME\workspace\Home_Infrastructure\.cursor\skills"
 )
 
 $ErrorActionPreference = "Stop"
@@ -454,7 +454,7 @@ Write-Host "  [OK] Copied: $($copiedRules.Count) rules" -ForegroundColor Green
 # Step 7.5: Copy documentation and .cursorignore
 Write-Host "[7.5/12] Copying documentation..." -ForegroundColor Yellow
 
-$homeInfraRoot = "C:\Users\Arman\workspace\Home_Infrastructure"
+$homeInfraRoot = "C:\Users\YOUR_USERNAME\workspace\Home_Infrastructure"
 
 # Copy .cursorignore
 $cursorignoreSource = Join-Path $homeInfraRoot ".cursorignore"
@@ -497,7 +497,7 @@ Write-Host "  [OK] Documentation copied" -ForegroundColor Green
 # Step 8: Create OpenSpec
 Write-Host "[8/12] Creating OpenSpec..." -ForegroundColor Yellow
 
-$openspecSource = "C:\Users\Arman\workspace\Home_Infrastructure\openspec"
+$openspecSource = "C:\Users\YOUR_USERNAME\workspace\Home_Infrastructure\openspec"
 if (Test-Path $openspecSource) {
     $agentsSource = Join-Path $openspecSource "AGENTS.md"
     if (Test-Path $agentsSource) {
@@ -661,8 +661,8 @@ This guide helps deploy project-specific MCP servers for enhanced AI capabilitie
 
 ## Prerequisites
 
-- Docker LXC (192.168.0.101) accessible
-- SSH access to homeserver
+- Docker LXC (YOUR_SERVER) accessible
+- SSH access to YOUR_SERVER
 - Project configuration dumped to src/cf/
 - **Configuration report exported** (see "Prepare Data" below)
 
@@ -723,7 +723,7 @@ Same structure in `mcp/ext/`:
 
 **Deployment:**
 ``````bash
-ssh homeserver "pct exec 100 -- docker run -d \\
+ssh YOUR_SERVER "pct exec 100 -- docker run -d \\
   --name ${projectLower}-codemetadata \\
   --restart unless-stopped \\
   -p 7500:8000 \\
@@ -750,7 +750,7 @@ ssh homeserver "pct exec 100 -- docker run -d \\
 
 **Deployment:**
 ``````bash
-ssh homeserver "pct exec 100 -- docker run -d \\
+ssh YOUR_SERVER "pct exec 100 -- docker run -d \\
   --name ${projectLower}-graph \\
   --restart unless-stopped \\
   -p 7501:7474 \\
@@ -773,7 +773,7 @@ ssh homeserver "pct exec 100 -- docker run -d \\
 
 **Deployment:**
 ``````bash
-ssh homeserver "pct exec 100 -- docker run -d \\
+ssh YOUR_SERVER "pct exec 100 -- docker run -d \\
   --name ${projectLower}-{extname}-codemetadata \\
   --restart unless-stopped \\
   -p 7510:8000 \\
@@ -800,7 +800,7 @@ ssh homeserver "pct exec 100 -- docker run -d \\
 
 **Deployment:**
 ``````bash
-ssh homeserver "pct exec 100 -- docker run -d \\
+ssh YOUR_SERVER "pct exec 100 -- docker run -d \\
   --name ${projectLower}-{extname}-graph \\
   --restart unless-stopped \\
   -p 7511:7474 \\
@@ -823,7 +823,7 @@ ssh homeserver "pct exec 100 -- docker run -d \\
 
 **Deployment:**
 ``````bash
-ssh homeserver "pct exec 100 -- docker run -d \\
+ssh YOUR_SERVER "pct exec 100 -- docker run -d \\
   --name ${projectLower}-help \\
   --restart unless-stopped \\
   -p 7503:8080 \\
@@ -844,7 +844,7 @@ Agent will ask:
 3. If Yes: "Для каких расширений создать MCP?" → List names or "all"
 
 Then agent will:
-1. Create Docker containers on 192.168.0.101
+1. Create Docker containers on YOUR_SERVER
 2. Configure mcp.json
 3. Start indexing
 4. Report when ready (~60 min per object)
@@ -917,14 +917,14 @@ Extension 2 (if any):
 See individual server sections above
 
 ### Step 3: Update mcp.json
-Add to ``C:\Users\Arman\.cursor\mcp.json``:
+Add to ``C:\Users\YOUR_USERNAME\.cursor\mcp.json``:
 
 **Configuration only:**
 ``````json
 {
   "${projectLower}-codemetadata": {
     "command": "curl",
-    "args": ["-X", "POST", "http://192.168.0.101:7500/search", "-H", "Content-Type: application/json", "-d", "@-"]
+    "args": ["-X", "POST", "http://YOUR_SERVER:7500/search", "-H", "Content-Type: application/json", "-d", "@-"]
   },
   "${projectLower}-graph": {
     "command": "docker",
@@ -938,7 +938,7 @@ Add to ``C:\Users\Arman\.cursor\mcp.json``:
 {
   "${projectLower}-codemetadata": {
     "command": "curl",
-    "args": ["-X", "POST", "http://192.168.0.101:7500/search", "-H", "Content-Type: application/json", "-d", "@-"]
+    "args": ["-X", "POST", "http://YOUR_SERVER:7500/search", "-H", "Content-Type: application/json", "-d", "@-"]
   },
   "${projectLower}-graph": {
     "command": "docker",
@@ -946,7 +946,7 @@ Add to ``C:\Users\Arman\.cursor\mcp.json``:
   },
   "${projectLower}-extname-codemetadata": {
     "command": "curl",
-    "args": ["-X", "POST", "http://192.168.0.101:7510/search", "-H", "Content-Type: application/json", "-d", "@-"]
+    "args": ["-X", "POST", "http://YOUR_SERVER:7510/search", "-H", "Content-Type: application/json", "-d", "@-"]
   },
   "${projectLower}-extname-graph": {
     "command": "docker",
@@ -961,14 +961,14 @@ Run indexing script (provided by mcp-deploy agent)
 ### Step 5: Verify
 ``````bash
 # Check semantic search (codemetadata)
-curl http://192.168.0.101:7500/health
+curl http://YOUR_SERVER:7500/health
 
 # Check Neo4j graph
-curl http://192.168.0.101:7501
+curl http://YOUR_SERVER:7501
 
 # For extension (if deployed)
-curl http://192.168.0.101:7510/health  # semantic search
-curl http://192.168.0.101:7511          # Neo4j
+curl http://YOUR_SERVER:7510/health  # semantic search
+curl http://YOUR_SERVER:7511          # Neo4j
 ``````
 
 ## After Deployment
@@ -984,7 +984,7 @@ curl http://192.168.0.101:7511          # Neo4j
 
 ### MCP server not responding
 ``````bash
-ssh homeserver "pct exec 100 -- docker logs ${projectLower}-metadata"
+ssh YOUR_SERVER "pct exec 100 -- docker logs ${projectLower}-metadata"
 ``````
 
 ### Indexing stuck

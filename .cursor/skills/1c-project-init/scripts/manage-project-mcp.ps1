@@ -1,4 +1,4 @@
-param(
+﻿param(
     [Parameter(Mandatory=$true)]
     [ValidateSet("create", "index-cloud", "switch-local", "enable", "disable", "status")]
     [string]$Action,
@@ -10,7 +10,7 @@ param(
     [int]$BasePort = 8000,
     [string]$CloudModel = "qwen/qwen-2.5-72b-instruct",
     [string]$LocalModel = "qwen3:8b",
-    [string]$OllamaHost = "http://192.168.0.106:11434"
+    [string]$OllamaHost = "http://YOUR_SERVER:11434"
 )
 
 $ErrorActionPreference = "Stop"
@@ -41,44 +41,44 @@ function Get-ProjectMcpConfig {
         mcpServers = @{
             # Общие MCP (всегда доступны)
             "1c-help" = @{
-                url = "http://192.168.0.101:8003/mcp"
+                url = "http://YOUR_SERVER:8003/mcp"
                 connection_id = "1c_docs_service_001"
                 description = "Справка по платформе 1С:Предприятие 8.3"
             }
             "1c-ssl" = @{
-                url = "http://192.168.0.101:8008/mcp"
+                url = "http://YOUR_SERVER:8008/mcp"
                 connection_id = "1c_ssl_service_001"
                 description = "Справка по БСП 3.1.11"
             }
             "1c-templates" = @{
-                url = "http://192.168.0.101:8004/mcp"
+                url = "http://YOUR_SERVER:8004/mcp"
                 connection_id = "1c_templates_service_001"
                 description = "Шаблоны кода 1С"
             }
             "1c-syntax-checker" = @{
-                url = "http://192.168.0.101:8002/mcp/"
+                url = "http://YOUR_SERVER:8002/mcp/"
                 connection_id = "1c_lsp_service_001"
                 description = "Проверка синтаксиса через BSL Language Server"
             }
             "1c-code-checker" = @{
-                url = "http://192.168.0.101:8007/mcp"
+                url = "http://YOUR_SERVER:8007/mcp"
                 connection_id = "1c_code_checker_001"
                 description = "Проверка логики кода через 1С:Напарника"
             }
             "1c-forms" = @{
-                url = "http://192.168.0.101:8011/mcp"
+                url = "http://YOUR_SERVER:8011/mcp"
                 connection_id = "1c_forms_service_001"
                 description = "Контекст для генерации управляемых форм"
             }
             "rlm-toolkit" = @{
-                url = "http://192.168.0.109:8200/sse"
+                url = "http://YOUR_SERVER:8200/sse"
                 connection_id = "rlm_toolkit_001"
                 description = "RLM-Toolkit: персистентная память между чатами"
             }
             "bsl-lsp-bridge" = @{
                 type = "stdio"
                 command = "ssh"
-                args = @("homeserver", "pct", "exec", "100", "--", "docker", "exec", "-i", "mcp-lsp-home-infra", "mcp-lsp-bridge")
+                args = @("YOUR_SERVER", "pct", "exec", "100", "--", "docker", "exec", "-i", "mcp-lsp-home-infra", "mcp-lsp-bridge")
                 connection_id = "bsl_lsp_bridge_001"
                 description = "BSL LSP Bridge: singleton LSP сервер"
             }
@@ -315,44 +315,44 @@ Write-Host "2. Restart Cursor" -ForegroundColor White
             $config = @{
                 mcpServers = @{
                     "1c-help" = @{
-                        url = "http://192.168.0.101:8003/mcp"
+                        url = "http://YOUR_SERVER:8003/mcp"
                         connection_id = "1c_docs_service_001"
                         description = "Справка по платформе 1С:Предприятие 8.3"
                     }
                     "1c-ssl" = @{
-                        url = "http://192.168.0.101:8008/mcp"
+                        url = "http://YOUR_SERVER:8008/mcp"
                         connection_id = "1c_ssl_service_001"
                         description = "Справка по БСП 3.1.11"
                     }
                     "1c-templates" = @{
-                        url = "http://192.168.0.101:8004/mcp"
+                        url = "http://YOUR_SERVER:8004/mcp"
                         connection_id = "1c_templates_service_001"
                         description = "Шаблоны кода 1С"
                     }
                     "1c-syntax-checker" = @{
-                        url = "http://192.168.0.101:8002/mcp/"
+                        url = "http://YOUR_SERVER:8002/mcp/"
                         connection_id = "1c_lsp_service_001"
                         description = "Проверка синтаксиса через BSL Language Server"
                     }
                     "1c-code-checker" = @{
-                        url = "http://192.168.0.101:8007/mcp"
+                        url = "http://YOUR_SERVER:8007/mcp"
                         connection_id = "1c_code_checker_001"
                         description = "Проверка логики кода через 1С:Напарника"
                     }
                     "1c-forms" = @{
-                        url = "http://192.168.0.101:8011/mcp"
+                        url = "http://YOUR_SERVER:8011/mcp"
                         connection_id = "1c_forms_service_001"
                         description = "Контекст для генерации управляемых форм"
                     }
                     "rlm-toolkit" = @{
-                        url = "http://192.168.0.109:8200/sse"
+                        url = "http://YOUR_SERVER:8200/sse"
                         connection_id = "rlm_toolkit_001"
                         description = "RLM-Toolkit: персистентная память"
                     }
                     "bsl-lsp-bridge" = @{
                         type = "stdio"
                         command = "ssh"
-                        args = @("homeserver", "pct", "exec", "100", "--", "docker", "exec", "-i", "mcp-lsp-home-infra", "mcp-lsp-bridge")
+                        args = @("YOUR_SERVER", "pct", "exec", "100", "--", "docker", "exec", "-i", "mcp-lsp-home-infra", "mcp-lsp-bridge")
                         connection_id = "bsl_lsp_bridge_001"
                         description = "BSL LSP Bridge: singleton LSP сервер"
                     }

@@ -7,7 +7,7 @@ description: Деплоймент MCP серверов. Развёртывани
 
 ## Инфраструктура
 
-- **Хост:** Docker LXC (CT 100), IP YOUR_SERVER, 8GB RAM
+- **Хост:** Docker LXC (CT XXX), IP YOUR_SERVER, 8GB RAM
 - **SSH:** `ssh YOUR_SERVER "pct exec 100 -- <cmd>"`
 - **Новая структура:** `/opt/docker-infrastructure/{rlm,common-mcp,projects}`
 

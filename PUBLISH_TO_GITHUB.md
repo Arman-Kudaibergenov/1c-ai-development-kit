@@ -14,7 +14,7 @@ grep -r "192\.168\." .cursor/ docs/ README.md
 
 # Проверка путей пользователя
 grep -r "C:\\Users\\Arman" .cursor/ docs/ README.md
-grep -r "/home/arman" .cursor/ docs/ README.md
+grep -r "/home/YOUR_USERNAME" .cursor/ docs/ README.md
 
 # Проверка проектных MCP
 grep -r "kaf-" .cursor/ docs/ README.md
@@ -44,7 +44,7 @@ grep -r "rarus" .cursor/ docs/ README.md
 ### 4. Добавление remote
 
 ```bash
-cd c:\Users\Arman\workspace\1c-ai-development-kit
+cd C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit
 
 # Добавьте GitHub remote
 git remote add github https://github.com/Jefest9988/1c-ai-development-kit.git
@@ -124,8 +124,8 @@ git checkout main
 # sync-public.ps1
 # Синхронизация изменений с публичным репозиторием
 
-$sourceDir = "C:\Users\Arman\workspace\1c-AI-workspace"
-$publicDir = "C:\Users\Arman\workspace\1c-ai-development-kit"
+$sourceDir = "C:\Users\YOUR_USERNAME\workspace\1c-AI-workspace"
+$publicDir = "C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit"
 
 # Копируем агентов
 Copy-Item "$sourceDir\.cursor\agents\*.md" -Destination "$publicDir\.cursor\agents\" -Force
@@ -154,13 +154,13 @@ Write-Host "Синхронизация завершена. Проверьте и
 
 ```bash
 # В основном проекте
-cd c:\Users\Arman\workspace\1c-AI-workspace
+cd C:\Users\YOUR_USERNAME\workspace\1c-AI-workspace
 
 # Запустите синхронизацию
 powershell -ExecutionPolicy Bypass -File sync-public.ps1
 
 # В публичном проекте
-cd c:\Users\Arman\workspace\1c-ai-development-kit
+cd C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit
 
 # Проверьте изменения
 git status
@@ -175,7 +175,7 @@ git push github main
 ### Обновление документации
 
 ```bash
-cd c:\Users\Arman\workspace\1c-ai-development-kit
+cd C:\Users\YOUR_USERNAME\workspace\1c-ai-development-kit
 
 # Редактируйте файлы в docs/
 # ...

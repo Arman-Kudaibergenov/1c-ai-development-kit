@@ -49,7 +49,7 @@ RLM:
 - **SSH:** `ssh YOUR_SERVER "pct exec 104 -- <cmd>"`
 - **Docker:** `ssh YOUR_SERVER "pct exec 104 -- docker exec postgres-1c psql -U postgres -c '<SQL>'"`
 
-## Dev Container (Docker LXC, CT 100)
+## Dev Container (Docker LXC, CT XXX)
 
 - **Образ:** `onec-local/onec-client:8.3.24.1808-ready`
 - **Контейнер:** onec-client

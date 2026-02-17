@@ -1,4 +1,4 @@
-Навык 1c-project-init ЗАВЕРШЁН (v1.0)
+﻿Навык 1c-project-init ЗАВЕРШЁН (v1.0)
 
 Контекст (загрузи из RLM):
 rlm_enterprise_context(query="1c-project-init skill")
@@ -6,7 +6,7 @@ rlm_enterprise_context(query="1c-project-init skill")
 Текущее состояние: ГОТОВ К ИСПОЛЬЗОВАНИЮ
 - init-1c-project.ps1 работает (10 шагов)
 - SKILL.md создан (проектный + персональный)
-- Персональный навык: C:\Users\Arman\.cursor\skills\1c-project-init\SKILL.md
+- Персональный навык: C:\Users\YOUR_USERNAME\.cursor\skills\1c-project-init\SKILL.md
 - Git: 24edaec, запушено в gitea
 
 Как работает:

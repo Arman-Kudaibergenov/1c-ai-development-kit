@@ -7,6 +7,10 @@
     "PROJECT-codemetadata": {
       "type": "http",
       "url": "http://YOUR_MCP_SERVER:7530/mcp"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
     }
   }
 }

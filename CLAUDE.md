@@ -96,6 +96,9 @@ openspec/          — Specification-Driven Development
 **Проектные (разворачиваются под каждый проект на CT XXX, YOUR_MCP_SERVER):**
 - `PROJECT-codemetadata` — документация платформы 1С (`helpsearch`). Каждый проект — свой контейнер на своём порту. Текущий: порт 7530
 
+**EDT (разработка 1С в IDE):**
+- `edt-mcp` (CT 107, 192.168.0.107:8765) — EDT MCP Server 1.24.5, инструменты для работы с 1C:EDT: `list_projects`, `get_configuration_properties`, `clean_project`, `get_edt_version` и др.
+
 **Локальные:**
 - `playwright` — управление браузером (веб-клиент 1С, отладка форм, тестирование)
 

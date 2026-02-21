@@ -11,6 +11,10 @@
     "playwright": {
       "command": "npx",
       "args": ["@playwright/mcp@latest"]
+    },
+    "edt-mcp": {
+      "type": "http",
+      "url": "http://192.168.0.107:8765/mcp"
     }
   }
 }

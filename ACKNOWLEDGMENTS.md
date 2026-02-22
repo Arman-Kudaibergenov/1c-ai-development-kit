@@ -65,7 +65,7 @@ RLM-toolkit — один из двух **бесплатных** MCP-сервер
 
 - 📰 Статья: [habr.com/ru/articles/986702/](https://habr.com/ru/articles/986702/)
 - 👤 Профиль: [habr.com/ru/users/Dmitrii_Labintsev/](https://habr.com/ru/users/Dmitrii_Labintsev/)
-- 🔧 GitHub: [ссылка будет добавлена при публикации]
+- 🔧 GitHub: [github.com/DmitrL-dev/AISecurity](https://github.com/DmitrL-dev/AISecurity)
 
 ## 🛠️ Инструменты и технологии
 
@@ -198,7 +198,7 @@ mcp-bsl-lsp-bridge — один из двух **бесплатных** MCP-се�
 
 - 💬 Telegram: [@Jefest9988](https://t.me/Jefest9988)
 - 📧 Email: arman.kudaibergenov.mail@gmail.com
-- 🐙 GitHub: [github.com/Jefest9988/1c-ai-development-kit](https://github.com/Jefest9988/1c-ai-development-kit)
+- 🐙 GitHub: [github.com/Arman-Kudaibergenov/1c-ai-development-kit](https://github.com/Arman-Kudaibergenov/1c-ai-development-kit)
 
 ---
 

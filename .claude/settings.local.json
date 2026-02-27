@@ -1,0 +1,8 @@
+{
+  "enabledMcpjsonServers": [
+    "rlm-toolkit",
+    "PROJECT-codemetadata",
+    "playwright"
+  ],
+  "enableAllProjectMcpServers": true
+}

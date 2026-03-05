@@ -8,8 +8,14 @@
   "hooks": {
     "PostToolUse": [
       {
-        "command": "powershell.exe -NoProfile -File scripts/context-monitor.ps1",
-        "timeout": 5000
+        "matcher": {},
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -File scripts/context-monitor.ps1",
+            "timeout": 5000
+          }
+        ]
       }
     ]
   }

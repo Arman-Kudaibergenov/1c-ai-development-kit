@@ -21,22 +21,25 @@
 
 ### Claude Code Skills
 
-71 skill для автоматизации полного цикла разработки 1С. Вызываются как `/skill-name` в диалоге с Claude:
+52 skills для автоматизации полного цикла разработки 1С. Вызываются как `/skill-name` в диалоге с Claude:
 
 | Группа | Skills |
 |--------|--------|
-| Объекты метаданных | `meta-compile`, `meta-edit`, `meta-info`, `meta-remove`, `meta-validate` |
-| Формы | `form-compile`, `form-edit`, `form-add`, `form-info`, `form-validate`, `form-patterns` |
-| Обработки (EPF) | `epf-init`, `epf-build`, `epf-dump`, `epf-validate`, `epf-bsp-init`, `epf-bsp-add-command` |
-| Отчёты (ERF) | `erf-init`, `erf-build`, `erf-dump`, `erf-validate` |
-| СКД | `skd-compile`, `skd-edit`, `skd-info`, `skd-validate` |
-| Макеты (MXL) | `mxl-compile`, `mxl-decompile`, `mxl-info`, `mxl-validate` |
-| Роли | `role-compile`, `role-info`, `role-validate` |
-| Подсистемы | `subsystem-compile`, `subsystem-edit`, `subsystem-info`, `subsystem-validate` |
-| Конфигурация | `cf-init`, `cf-edit`, `cf-info`, `cf-validate` |
-| Расширения (CFE) | `cfe-init`, `cfe-borrow`, `cfe-patch-method`, `cfe-validate`, `cfe-diff` |
+| Объекты метаданных | `meta-compile`, `meta-edit`, `meta-remove` |
+| Формы | `form-compile`, `form-edit`, `form-add`, `form-remove`, `form-patterns`, `help-add` |
+| Обработки (EPF) | `epf-expert` (init, build, dump, bsp-init, bsp-add-command) |
+| Отчёты (ERF) | `erf-expert` (init, build, dump) |
+| СКД | `skd-compile`, `skd-edit` |
+| Макеты (MXL) | `mxl-expert` (compile, decompile, template-add, template-remove) |
+| Роли | `role-expert` (compile + audit) |
+| Подсистемы | `subsystem-expert` (compile, edit, interface-edit) |
+| Конфигурация | `cf-init`, `cf-edit` |
+| Расширения (CFE) | `cfe-init`, `cfe-borrow`, `cfe-patch-method`, `cfe-diff` |
+| Инспекция | `inspect` (cf, meta, form, skd, mxl, role, subsystem info) |
+| Валидация | `validate` (cf, cfe, meta, form, skd, mxl, role, subsystem) |
 | База данных | `db-create`, `db-list`, `db-run`, `db-update`, `db-dump-cf`, `db-load-cf`, `db-dump-xml`, `db-load-xml`, `db-load-git` |
-| Workflow | `1c-feature-dev`, `1c-help-mcp`, `1c-query-opt`, `1c-project-init`, `bsp-patterns` |
+| Веб-клиент | `1c-web-session`, `web-publish`, `web-unpublish`, `web-info`, `web-stop`, `web-test` |
+| Workflow | `brainstorm`, `write-plan`, `subagent-dev`, `1c-help-mcp`, `1c-query-opt`, `1c-project-init`, `1c-test-runner`, `bsp-patterns`, `playwright-test`, `img-grid` |
 | OpenSpec | `openspec-proposal`, `openspec-apply`, `openspec-archive` |
 
 ### Cursor IDE
@@ -114,3 +117,24 @@ XML-форматы объектов 1С, JSON DSL для компиляции б
 ---
 
 **Сделано с ❤️ для сообщества 1С-разработчиков**
+
+---
+
+## Changelog
+
+### v1.1.0 (2026-03-05)
+
+**Консолидация skills: 14 granular skills объединены в 5 expert skills**
+
+- `epf-expert` — объединяет: `epf-add-form`, `epf-bsp-add-command`, `epf-bsp-init`, `epf-erf-build`, `epf-erf-dump`, `epf-erf-init`
+- `mxl-expert` — объединяет: `mxl-compile`, `mxl-decompile`, `template-add`, `template-remove`
+- `role-expert` — объединяет: `role-compile` + аудит прав
+- `subsystem-expert` — объединяет: `subsystem-compile`, `subsystem-edit`, `interface-edit`
+- `inspect` — заменяет 7 `*-info` skills (cf-info, meta-info, form-info, skd-info, mxl-info, role-info, subsystem-info)
+- `validate` — заменяет 11 `*-validate` skills
+
+Итого: 80 → 52 skills. Меньше overlap, полное domain coverage per skill.
+
+### v1.0.0
+
+Первый публичный релиз. 80 skills для полного цикла разработки на 1С.

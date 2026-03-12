@@ -4,6 +4,11 @@
       "type": "http",
       "url": "http://YOUR_RLM_SERVER:8200/mcp"
     },
+    "context-mode": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "context-mode"]
+    },
     "playwright": {
       "command": "npx",
       "args": [

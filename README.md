@@ -1,6 +1,6 @@
 ﻿# 1C AI Development Kit
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL--3.0](https://img.shields.io/badge/License-AGPL_3.0-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-supported-blue.svg)](https://claude.ai/code)
 [![Cursor IDE](https://img.shields.io/badge/Cursor_IDE-supported-purple.svg)](https://cursor.sh/)
 
